@@ -1,0 +1,18 @@
+{
+  "name": "improvado",
+  "owner": {
+    "name": "Improvado",
+    "email": "support@improvado.io"
+  },
+  "metadata": {
+    "description": "Improvado MCP: marketing data for AI agents."
+  },
+  "plugins": [
+    {
+      "name": "improvado",
+      "source": "./",
+      "description": "Connect your AI agent to marketing data in your Improvado workspace: ask about ads, CRM and analytics data from the sources you have connected.",
+      "homepage": "https://improvado.io/docs-section-topic/improvado-mcp"
+    }
+  ]
+}

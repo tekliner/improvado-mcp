@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "improvado": {
+      "type": "http",
+      "url": "https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
+    }
+  }
+}

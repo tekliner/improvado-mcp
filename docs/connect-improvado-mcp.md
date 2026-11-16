@@ -40,8 +40,58 @@ claude mcp add --transport http improvado https://report.improvado.io/experiment
 
 Use your custom Improvado domain in the URL if your account requires one. Open Claude Code and complete the Improvado OAuth prompt when you connect.
 
+Or install the plugin from this repository. It adds the same server to Claude Code:
+
+```bash
+claude plugin marketplace add tekliner/improvado-mcp
+claude plugin install improvado@improvado
+```
+
+## ChatGPT
+
+1. Open **Apps** in the left sidebar and search for **Improvado**.
+2. Select **Improvado AI Agent**, then **Connect**.
+3. Sign in with your Improvado account.
+
+## Cursor
+
+Use the **Install in Cursor** button in the [README](../README.md), or add this to `~/.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "improvado": {
+      "url": "https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
+    }
+  }
+}
+```
+
+## VS Code with GitHub Copilot
+
+Use the **Install in VS Code** button in the [README](../README.md), or add this to `.vscode/mcp.json`:
+
+```json
+{
+  "servers": {
+    "improvado": {
+      "type": "http",
+      "url": "https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
+    }
+  }
+}
+```
+
+## Gemini CLI
+
+```bash
+gemini extensions install https://github.com/tekliner/improvado-mcp
+```
+
+Then run `/mcp auth improvado` in a chat session and sign in.
+
 ## Check the connection
 
 Ask your connected client which marketing data sources your account can access. If sign-in fails, confirm your domain and account access, then follow the [official setup guide](https://improvado.io/docs-section-topic/improvado-mcp-text).
 
-For setup in other clients, use the [official Improvado MCP guide](https://improvado.io/docs-section-topic/improvado-mcp-text). This guide contains connection instructions and broad use cases only. It contains no server code, customer data, example campaign results, or credentials.
+For Antigravity, Microsoft Copilot Studio and Microsoft 365 Copilot, use the [official Improvado MCP guide](https://improvado.io/docs-section-topic/improvado-mcp-text). This guide contains connection instructions and broad use cases only. It contains no server code, customer data, example campaign results, or credentials.

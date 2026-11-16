@@ -1,0 +1,19 @@
+{
+  "name": "improvado",
+  "version": "1.0.0",
+  "displayName": "Improvado",
+  "description": "Connect your AI agent to marketing data in your Improvado workspace: ask about ads, CRM and analytics data from the sources you have connected.",
+  "author": {
+    "name": "Improvado",
+    "url": "https://improvado.io"
+  },
+  "homepage": "https://github.com/tekliner/improvado-mcp",
+  "repository": "https://github.com/tekliner/improvado-mcp",
+  "keywords": ["improvado", "marketing", "marketing-analytics", "marketing-data", "mcp", "google-ads", "meta-ads", "ga4"],
+  "mcpServers": {
+    "improvado": {
+      "type": "http",
+      "url": "https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
+    }
+  }
+}

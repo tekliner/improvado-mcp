@@ -1,0 +1,32 @@
+# Improvado MCP
+
+> Improvado MCP is a remote Model Context Protocol server that lets AI agents work with marketing data in an Improvado workspace: ads, CRM and analytics sources that the account has connected. This repository contains public listing manifests and setup instructions. Improvado hosts the server; its implementation is not open source and is not in this repository.
+
+Server URL: https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/ (streamable HTTP, OAuth sign-in with an Improvado account)
+
+MCP Registry name: io.improvado/mcp
+
+## What it does
+
+- Lists the marketing data sources available to the signed-in account.
+- Answers questions about spend, performance and conversions across connected channels.
+- Helps build summaries and comparisons, such as weekly performance reports or cross-channel ROAS.
+
+Results depend on the sources connected to the workspace and on the account's permissions.
+
+## Install
+
+- ChatGPT: Apps > search "Improvado" > Improvado AI Agent > Connect.
+- Claude Desktop: Customize > Connectors > Add custom connector > paste the server URL.
+- Claude Code: claude plugin marketplace add tekliner/improvado-mcp, then claude plugin install improvado@improvado
+- Cursor and VS Code: install buttons in README.md.
+- Gemini CLI: gemini extensions install https://github.com/tekliner/improvado-mcp
+
+## Links
+
+- Setup guide: https://github.com/tekliner/improvado-mcp/blob/master/docs/connect-improvado-mcp.md
+- Official documentation: https://improvado.io/docs-section-topic/improvado-mcp-text
+- Website: https://improvado.io
+- Privacy policy: https://improvado.io/company-legal/privacy-policy
+- Terms of use: https://improvado.io/legal/terms-of-use
+- Support: support@improvado.io
