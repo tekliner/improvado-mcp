@@ -1,0 +1,22 @@
+{
+  "name": "bb-plugin-improvado",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Connect BB agents to Improvado MCP for marketing data.",
+  "homepage": "https://github.com/tekliner/improvado-mcp",
+  "repository": { "type": "git", "url": "https://github.com/tekliner/improvado-mcp.git", "directory": "bb-plugin" },
+  "engines": { "bb": ">=0.43", "bbPluginSdk": ">=0.5.9" },
+  "bb": {
+    "name": "Improvado",
+    "description": "Connect your agents to Improvado MCP and ask about ads, CRM and analytics data in your Improvado workspace.",
+    "branding": { "icon": "./assets/icon.svg" },
+    "server": "./server.ts",
+    "skills": ["skills"]
+  },
+  "scripts": { "build": "bb plugin build" },
+  "devDependencies": {
+    "@get-bb/plugin-sdk": "0.5.9",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}
