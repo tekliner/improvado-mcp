@@ -64,3 +64,6 @@ Listing manifests and setup files: `server.json` (official MCP Registry entry `i
 - [Terms of use](https://improvado.io/legal/terms-of-use)
 - Support: [support@improvado.io](mailto:support@improvado.io)
 
+## License
+
+The files in this repository are available under the [MIT License](LICENSE). The license covers the setup files, manifests and docs in this repository. It does not cover the Improvado service or the hosted MCP server, which remain proprietary and require an Improvado account.
