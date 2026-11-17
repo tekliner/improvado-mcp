@@ -7,5 +7,5 @@ The plugin ships one skill, `improvado-mcp`, that shows agents how to connect th
 Install:
 
 ```bash
-bb plugin install git:https://github.com/tekliner/improvado-mcp.git --subdirectory bb-plugin
+bb plugin install "git:https://github.com/tekliner/improvado-mcp.git@^0.1.0" --subdirectory bb-plugin --tag-prefix bb-plugin-improvado/
 ```
