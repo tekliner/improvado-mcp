@@ -13,20 +13,18 @@ If the user's company signs in to Improvado on its own domain, use that domain i
 
 ## Connect
 
-1. Check whether an `improvado` MCP server is already available in this thread. If it is, skip to "Ask".
+1. Check whether an Improvado MCP server (for example `improvado` or `improvado-customer`) is already available in this thread. If it is, skip to "Ask".
 2. In a Claude Code thread, ask the user to run:
 
    ```bash
    claude mcp add --transport http improvado https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/
    ```
-
-   Or install the plugin: `claude plugin marketplace add tekliner/improvado-mcp`, then `claude plugin install improvado@improvado`.
 3. In a Codex thread, follow the Codex steps in the official guide: <https://improvado.io/docs-section-topic/improvado-mcp>
 4. Start a new thread so the client loads the server, then complete the Improvado sign-in prompt.
 
 Never ask the user for passwords, tokens or client secrets, and never write them into files. Sign-in happens through OAuth in the client.
 
-Setup guide for every client: https://github.com/tekliner/improvado-mcp/blob/master/docs/connect-improvado-mcp.md
+Setup guide: https://github.com/tekliner/improvado-mcp/blob/master/docs/connect-improvado-mcp.md
 
 ## Ask
 
