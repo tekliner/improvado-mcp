@@ -10,6 +10,8 @@
   "repository": "https://github.com/tekliner/improvado-mcp",
   "license": "MIT",
   "privacyPolicyUrl": "https://improvado.io/company-legal/privacy-policy",
+  "termsOfServiceUrl": "https://improvado.io/legal/terms-of-use",
+  "supportUrl": "https://improvado.io/help",
   "icon": "./.claude-plugin/icon.png",
   "keywords": [
     "improvado",
