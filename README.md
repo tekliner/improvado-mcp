@@ -289,7 +289,8 @@ mcp-name: io.improvado/mcp
 | `llms.txt` | Short summary for AI agents and crawlers |
 | `server.json` | Official MCP Registry entry `io.improvado/mcp` |
 | `.mcp.json`, `.vscode/mcp.json` | Server config for Claude Code projects and VS Code |
-| `.claude-plugin/` | Claude Code plugin marketplace and plugin manifests |
+| `.claude-plugin/marketplace.json` | Claude Code plugin marketplace manifest; its source is `plugins/improvado/` |
+| `plugins/improvado/` | Claude Code plugin: plugin manifest, `.mcp.json`, the `improvado-mcp` skill, README and license |
 | `.cursor-plugin/plugin.json` | Cursor plugin manifest |
 | `gemini-extension.json` | Gemini CLI extension manifest |
 | `bb-plugin/` | BB plugin with the `improvado-mcp` skill |
