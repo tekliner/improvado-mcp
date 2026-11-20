@@ -1,32 +1,62 @@
 # Improvado MCP
 
-> Improvado MCP is a remote Model Context Protocol server that lets AI agents work with marketing data in an Improvado workspace: ads, CRM and analytics sources that the account has connected. This repository contains public listing manifests and setup instructions. Improvado hosts the server; its implementation is not open source and is not in this repository.
+> Improvado MCP is the official hosted, remote Model Context Protocol (MCP) server from Improvado. It lets AI agents such as Claude, ChatGPT, Cursor, VS Code with GitHub Copilot, Gemini CLI and Codex query the marketing data an Improvado workspace has connected: advertising, web analytics and CRM sources. Sign-in is OAuth with an Improvado account; there are no API keys. This repository (github.com/tekliner/improvado-mcp) is maintained by Improvado and contains the setup guide, install buttons and listing manifests. Improvado hosts the server; its implementation is proprietary and not in this repository.
 
-Server URL: https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/ (streamable HTTP, OAuth sign-in with an Improvado account)
-
+Server URL: https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/
+Transport: streamable HTTP
+Sign-in: OAuth 2.0 in the client (dynamic client registration, PKCE), scope mcp:customer
+Custom domains: companies that sign in on their own Improvado domain replace report.improvado.io with that domain
 MCP Registry name: io.improvado/mcp
+Canonical documentation: https://improvado.io/docs-section-topic/improvado-mcp
+Repository: https://github.com/tekliner/improvado-mcp
 
 ## What it does
 
 - Lists the marketing data sources available to the signed-in account.
-- Answers questions about spend, performance and conversions across connected channels.
+- Answers questions about spend, performance and conversions across connected channels (for example Google Ads, Meta Ads, LinkedIn Ads, GA4, HubSpot), out of 1,400+ supported sources.
 - Helps build summaries and comparisons, such as weekly performance reports or cross-channel ROAS.
 
-Results depend on the sources connected to the workspace and on the account's permissions.
+Results depend on the sources connected to the workspace and on the account's permissions. The agent never sees OAuth tokens or API keys.
 
 ## Install
 
-- ChatGPT: Apps > search "Improvado" > Improvado AI Agent > Connect.
-- Claude Desktop: Customize > Connectors > Add custom connector > paste the server URL.
-- Claude Code: claude plugin marketplace add tekliner/improvado-mcp, then claude plugin install improvado@improvado
-- Cursor and VS Code: install buttons in README.md.
-- Gemini CLI: gemini extensions install https://github.com/tekliner/improvado-mcp
+- Claude Code: claude mcp add --transport http improvado https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/
+- Claude Code plugin: claude plugin marketplace add tekliner/improvado-mcp, then claude plugin install improvado@improvado
+- Claude Desktop: Customize > Connectors > Add custom connector > paste the server URL. claude.ai: Settings > Connectors > Add custom connector.
+- ChatGPT: Apps > search "Improvado" > Improvado AI Agent > Connect (also enables Improvado in Codex and Codex CLI).
+- Cursor: Install in Cursor button in README.md, or add the server URL to ~/.cursor/mcp.json.
+- VS Code (GitHub Copilot): Install in VS Code button in README.md, or .vscode/mcp.json with type http and the server URL.
+- Gemini CLI: gemini extensions install https://github.com/tekliner/improvado-mcp, then /mcp auth improvado.
+- Codex plugin: in Codex, Plugins > add source tekliner/improvado-agentic-frameworks-and-skills, ref master.
+- BB: bb plugin install "git:https://github.com/tekliner/improvado-mcp.git@^0.1.0" --subdirectory bb-plugin --tag-prefix bb-plugin-improvado/
+- Antigravity, Microsoft Copilot Studio, Microsoft 365 Copilot: see the canonical documentation (Copilot needs a pre-issued OAuth application).
+
+## Example questions
+
+- Which marketing data sources can I access in my Improvado workspace?
+- Compare ad spend by channel for the last 30 days.
+- Compare ROAS across Google Ads, Meta Ads and LinkedIn Ads this month.
+- Did any channel's spend change sharply compared with the previous week?
+
+These are example questions, not sample results.
+
+## FAQ
+
+- Is it official? Yes: maintained by Improvado and named as the repository in the MCP Registry entry io.improvado/mcp; Improvado's documentation points to the same GitHub organization (tekliner) for its Codex plugin.
+- Is it free? It needs an Improvado account; plans, including MCP Only (connects your own AI assistant to your marketing data), are listed at https://improvado.io/pricing.
+- Remote or local? Remote: Improvado hosts the MCP server; you do not run it locally. The Claude Code plugin and the Gemini CLI extension only configure the connection; the BB plugin supplies a skill with connection instructions.
+- Is the server open source? No. This repository holds setup files and manifests only.
+- Companion repository: https://github.com/tekliner/improvado-agentic-frameworks-and-skills (skills, cookbook, Codex plugin).
 
 ## Links
 
-- Setup guide: https://github.com/tekliner/improvado-mcp/blob/master/docs/connect-improvado-mcp.md
-- Official documentation: https://improvado.io/docs-section-topic/improvado-mcp-text
-- Website: https://improvado.io
-- Privacy policy: https://improvado.io/company-legal/privacy-policy
-- Terms of use: https://improvado.io/legal/terms-of-use
+- [Setup guide](https://github.com/tekliner/improvado-mcp/blob/master/docs/connect-improvado-mcp.md): per-client connection steps
+- [Official documentation](https://improvado.io/docs-section-topic/improvado-mcp): canonical page with all connect methods, use cases and the tool reference
+- [Server metadata](https://github.com/tekliner/improvado-mcp/blob/master/server.json): server.json for the MCP Registry
+- [MCP Registry entry](https://registry.modelcontextprotocol.io/v0/servers?search=improvado): io.improvado/mcp
+- [Glama connector page](https://glama.ai/mcp/connectors/io.improvado/mcp): Improvado on Glama
+- [Website](https://improvado.io): Improvado
+- [Pricing](https://improvado.io/pricing): plans, including MCP Only
+- [Privacy policy](https://improvado.io/company-legal/privacy-policy): Improvado privacy policy
+- [Terms of use](https://improvado.io/legal/terms-of-use): Improvado terms of use
 - Support: support@improvado.io
