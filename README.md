@@ -1,8 +1,9 @@
 # Improvado MCP: the official MCP server for marketing data in Claude, ChatGPT, Cursor, VS Code, Gemini CLI and Codex
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/hero-banner-dark.svg">
-  <img src="assets/readme/hero-banner-light.svg" alt="Improvado MCP: your marketing data, in the AI client you already use. A hosted MCP server; sign in with OAuth once, then ask Claude, ChatGPT, Cursor, VS Code, Gemini CLI or Codex about the channels connected to your Improvado account." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tekliner/improvado-mcp/master/assets/readme/hero-banner-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/tekliner/improvado-mcp/master/assets/readme/hero-banner-light.svg">
+  <img src="https://raw.githubusercontent.com/tekliner/improvado-mcp/master/assets/readme/hero-banner-dark.svg" alt="Improvado MCP: your marketing data, in the AI client you already use" width="100%">
 </picture>
 
 Improvado MCP is a hosted, remote [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server from [Improvado](https://improvado.io). It lets AI agents such as Claude, ChatGPT, Cursor, VS Code with GitHub Copilot, Gemini CLI and Codex query the marketing data your Improvado workspace has connected: advertising, web analytics and CRM sources. You sign in with your Improvado login through OAuth; there are no API keys to manage. This repository is maintained by Improvado and holds the setup guide, install buttons and listing manifests. Improvado hosts the server; its implementation is proprietary and not in this repository.
@@ -41,9 +42,12 @@ Then open Claude Code and complete the Improvado sign-in prompt. Every other cli
 ## What Improvado MCP does
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/how-it-works-dark.svg">
-  <img src="assets/readme/how-it-works-light.svg" alt="Diagram: your AI client (Claude, ChatGPT, Cursor, VS Code, Gemini CLI, Codex or any MCP client) connects over MCP to Improvado MCP, a hosted remote server with OAuth sign-in that applies your workspace permissions, which reads marketing data from the sources connected to your Improvado workspace, for example Google Ads, Meta Ads, LinkedIn Ads, TikTok Ads, Google Analytics 4, HubSpot, Salesforce and Shopify, out of 1,400+ supported sources. Three steps: add the server URL in your client, sign in with Improvado, ask questions in plain language." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tekliner/improvado-mcp/master/assets/readme/how-it-works-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/tekliner/improvado-mcp/master/assets/readme/how-it-works-light.svg">
+  <img src="https://raw.githubusercontent.com/tekliner/improvado-mcp/master/assets/readme/how-it-works-dark.svg" alt="How Improvado MCP works: your AI client connects over MCP to the hosted Improvado MCP server with OAuth sign-in. The server reads marketing data from the sources connected to your Improvado workspace." width="100%">
 </picture>
+
+Three steps: add the server URL in your AI client, sign in with Improvado, ask questions in plain language.
 
 - **One connection for every channel.** Your AI client talks to one MCP server; the server reaches the sources your Improvado workspace has connected. Improvado supports 1,400+ data sources and 46,000+ unified metrics ([Improvado MCP documentation](https://improvado.io/docs-section-topic/improvado-mcp)).
 - **Plain-language questions, governed answers.** Ask about spend, performance and conversions across channels; the answer uses the data and permissions of your workspace.
@@ -60,8 +64,9 @@ Then open Claude Code and complete the Improvado sign-in prompt. Every other cli
 ## Install in your AI client
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/clients-row-dark.svg">
-  <img src="assets/readme/clients-row-light.svg" alt="Supported AI clients for Improvado MCP: Claude, ChatGPT, Cursor, VS Code, Gemini CLI, Codex, and any MCP client." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tekliner/improvado-mcp/master/assets/readme/clients-row-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/tekliner/improvado-mcp/master/assets/readme/clients-row-light.svg">
+  <img src="https://raw.githubusercontent.com/tekliner/improvado-mcp/master/assets/readme/clients-row-dark.svg" alt="Works with Claude, ChatGPT, Cursor, VS Code, Gemini CLI, Codex and other MCP clients" width="100%">
 </picture>
 
 You need an Improvado account with access to the workspace you want to use. Authenticate through your client's OAuth flow. Never share credentials in chat or commit them to this repository. For Microsoft Copilot, enter the issued client credentials only in the configuration fields named by the official guide.
@@ -187,8 +192,9 @@ Ask your client: "Which marketing data sources can I access in my Improvado work
 ## What you can ask
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/readme/example-questions-dark.svg">
-  <img src="assets/readme/example-questions-light.svg" alt="Example questions for Improvado MCP: Compare ad spend by channel for the last 30 days. Which campaigns had the highest cost per conversion last week? Compare ROAS across Google Ads, Meta Ads and LinkedIn Ads this month. Show sessions and conversions by source in GA4 for the last 14 days. Did any channel's spend change sharply compared with the previous week? Build a weekly performance summary I can share with my team. These are example questions, not sample results." width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tekliner/improvado-mcp/master/assets/readme/example-questions-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/tekliner/improvado-mcp/master/assets/readme/example-questions-light.svg">
+  <img src="https://raw.githubusercontent.com/tekliner/improvado-mcp/master/assets/readme/example-questions-dark.svg" alt="What you can ask Improvado MCP: six example questions, not sample results" width="100%">
 </picture>
 
 Questions like these work when the matching sources are connected to your Improvado workspace:
@@ -294,7 +300,7 @@ mcp-name: io.improvado/mcp
 | `.cursor-plugin/plugin.json` | Cursor plugin manifest |
 | `gemini-extension.json` | Gemini CLI extension manifest |
 | `bb-plugin/` | BB plugin with the `improvado-mcp` skill |
-| `assets/readme/` | Images used on this page and the social preview |
+| `assets/readme/` | Images used on this page, plus the social preview PNG and its SVG source |
 
 This repository contains connection configuration, plugin packaging, documentation and images. It does not contain the hosted Improvado MCP implementation, credentials or customer data.
 
