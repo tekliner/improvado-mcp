@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "improvado",
-      "source": "./",
+      "source": "./plugins/improvado",
       "description": "Connect your AI agent to marketing data in your Improvado workspace: ask about ads, CRM and analytics data from the sources you have connected.",
       "homepage": "https://improvado.io/docs-section-topic/improvado-mcp"
     }
