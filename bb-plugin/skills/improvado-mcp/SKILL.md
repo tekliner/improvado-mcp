@@ -7,9 +7,9 @@ description: Connect the agent to Improvado MCP and answer marketing data questi
 
 Improvado MCP is a hosted remote MCP server. It gives an agent access to marketing data that the user's Improvado account has connected: advertising, web analytics and CRM sources. The user signs in with their Improvado login through OAuth. What the agent can see depends on the workspace permissions and connected sources.
 
-Server URL: `https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/`
+Server URL: `https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/`
 
-If the user's company signs in to Improvado on its own domain, use that domain instead of `report.improvado.io`.
+Existing Improvado customers sign in at `report.improvado.io`, or on their company's own Improvado domain. For them, use that domain instead of `ai.improvado.io` in every URL. New users sign up at `ai.improvado.io` with a work email.
 
 ## Connect
 
@@ -17,7 +17,7 @@ If the user's company signs in to Improvado on its own domain, use that domain i
 2. In a Claude Code thread, ask the user to run:
 
    ```bash
-   claude mcp add --transport http improvado https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/
+   claude mcp add --transport http improvado https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/
    ```
 3. In a Codex thread, follow the Codex steps in the official guide: <https://improvado.io/docs-section-topic/improvado-mcp>
 4. Start a new thread so the client loads the server, then complete the Improvado sign-in prompt.
