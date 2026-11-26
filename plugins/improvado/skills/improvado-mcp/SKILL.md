@@ -8,9 +8,9 @@ description: Answer marketing data questions (ad spend, ROAS, campaign and chann
 Improvado MCP is a hosted remote MCP server. It gives an agent access to marketing data that the user's Improvado account has connected: advertising, web analytics and CRM sources. The user signs in with their Improvado login through OAuth. What the agent can see depends on the workspace permissions and connected sources.
 
 This plugin adds the server as `improvado`:
-`https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/`
+`https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/`
 
-This plugin uses `report.improvado.io`. For a custom Improvado domain, follow the setup guide to configure a separate MCP connection with your organization's endpoint.
+This plugin uses `ai.improvado.io`, where new users sign up with a work email. Existing Improvado customers sign in at `report.improvado.io` or on their company's own Improvado domain. For them, follow the setup guide to add a separate MCP connection with that endpoint.
 
 ## Connect
 

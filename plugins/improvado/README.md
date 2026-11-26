@@ -12,4 +12,4 @@ claude plugin marketplace add tekliner/improvado-mcp
 claude plugin install improvado@improvado
 ```
 
-Requires an Improvado account. Setup guide: https://improvado.io/docs-section-topic/improvado-mcp
+Requires an Improvado account. New users sign up at `ai.improvado.io` with a work email. Existing customers on `report.improvado.io` or their own domain connect through the setup guide: https://improvado.io/docs-section-topic/improvado-mcp
