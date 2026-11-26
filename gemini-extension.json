@@ -1,10 +1,10 @@
 {
   "name": "improvado",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Marketing data for AI agents: query ads, CRM and analytics data in your Improvado workspace.",
   "mcpServers": {
     "improvado": {
-      "url": "https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/",
+      "url": "https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/",
       "type": "http",
       "oauth": {
         "scopes": ["mcp:customer"]

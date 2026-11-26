@@ -1,6 +1,6 @@
 {
   "name": "bb-plugin-improvado",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "description": "Connect BB agents to Improvado MCP for marketing data.",
   "homepage": "https://github.com/tekliner/improvado-mcp",

@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.improvado/mcp",
   "title": "Improvado",
-  "description": "Marketing data for AI agents: query ads, CRM and analytics data in your Improvado workspace.",
-  "version": "1.0.0",
+  "description": "Marketing data for AI agents: ads, CRM, analytics. Existing customers use report.improvado.io",
+  "version": "1.1.0",
   "websiteUrl": "https://improvado.io/docs-section-topic/improvado-mcp",
   "repository": {
     "url": "https://github.com/tekliner/improvado-mcp",
@@ -12,7 +12,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
+      "url": "https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
     }
   ]
 }
