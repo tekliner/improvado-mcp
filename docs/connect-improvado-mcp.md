@@ -20,9 +20,9 @@ These are example questions, not sample results or a promise that every account 
 
 - An Improvado account with access to the workspace you want to use.
 - An MCP client that supports remote HTTP servers and OAuth sign-in.
-- The server URL for your account. Standard accounts use `https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/`. If your company uses a custom Improvado domain, replace `report.improvado.io` with that domain.
+- The server URL for your account. New users create a free account at `ai.improvado.io` with a work email and use `https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/`. Existing customers use `https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/`, or their company's own Improvado domain in place of `report.improvado.io`. An account exists on one domain only. The examples below use `ai.improvado.io`.
 
-This URL is already published in the [official Improvado MCP guide](https://improvado.io/docs-section-topic/improvado-mcp). Sign in through your MCP client's OAuth flow. Do not put passwords, tokens, or client secrets into this repository or a shared configuration file.
+Both URLs are published in the [official Improvado MCP guide](https://improvado.io/docs-section-topic/improvado-mcp). Sign in through your MCP client's OAuth flow. Do not put passwords, tokens, or client secrets into this repository or a shared configuration file.
 
 ## Claude Desktop
 
@@ -35,7 +35,7 @@ This URL is already published in the [official Improvado MCP guide](https://impr
 Run this command for a standard Improvado account:
 
 ```bash
-claude mcp add --transport http improvado https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/
+claude mcp add --transport http improvado https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/
 ```
 
 Use your custom Improvado domain in the URL if your account requires one. Open Claude Code and complete the Improvado OAuth prompt when you connect.
@@ -61,7 +61,7 @@ Use the **Install in Cursor** button in the [README](../README.md), or add this 
 {
   "mcpServers": {
     "improvado": {
-      "url": "https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
+      "url": "https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
     }
   }
 }
@@ -76,7 +76,7 @@ Use the **Install in VS Code** button in the [README](../README.md), or add this
   "servers": {
     "improvado": {
       "type": "http",
-      "url": "https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
+      "url": "https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
     }
   }
 }

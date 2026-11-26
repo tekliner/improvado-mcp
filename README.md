@@ -8,18 +8,20 @@
 
 Improvado MCP is a hosted, remote [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server from [Improvado](https://improvado.io). It lets AI agents such as Claude, ChatGPT, Cursor, VS Code with GitHub Copilot, Gemini CLI and Codex query the marketing data your Improvado workspace has connected: advertising, web analytics and CRM sources. You sign in with your Improvado login through OAuth; there are no API keys to manage. This repository is maintained by Improvado and holds the setup guide, install buttons and listing manifests. Improvado hosts the server; its implementation is proprietary and not in this repository.
 
-[![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=improvado&config=eyJ1cmwiOiJodHRwczovL3JlcG9ydC5pbXByb3ZhZG8uaW8vZXhwZXJpbWVudGFsL2FnZW50L2FwaS9tY3AtY3VzdG9tZXIvdjEvaW52b2tlLyJ9)
-[![Install in VS Code](https://img.shields.io/badge/VS_Code-install_Improvado_MCP-0098FF?logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=improvado&config=%7B%22type%22%3A%20%22http%22%2C%20%22url%22%3A%20%22https%3A%2F%2Freport.improvado.io%2Fexperimental%2Fagent%2Fapi%2Fmcp-customer%2Fv1%2Finvoke%2F%22%7D)
+[![Install in Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=improvado&config=eyJ1cmwiOiJodHRwczovL2FpLmltcHJvdmFkby5pby9leHBlcmltZW50YWwvYWdlbnQvYXBpL21jcC1jdXN0b21lci92MS9pbnZva2UvIn0=)
+[![Install in VS Code](https://img.shields.io/badge/VS_Code-install_Improvado_MCP-0098FF?logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=improvado&config=%7B%22type%22%3A%20%22http%22%2C%20%22url%22%3A%20%22https%3A%2F%2Fai.improvado.io%2Fexperimental%2Fagent%2Fapi%2Fmcp-customer%2Fv1%2Finvoke%2F%22%7D)
 [![MCP Registry](https://img.shields.io/badge/MCP_Registry-io.improvado%2Fmcp-6f42c1)](https://registry.modelcontextprotocol.io/v0/servers?search=improvado)
 [![MCP](https://img.shields.io/badge/Model_Context_Protocol-streamable_HTTP-black)](https://modelcontextprotocol.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-**Server URL:** `https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/`
+**Server URL:** `https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/`
+
+New users create a free account at `ai.improvado.io` with a work email. Existing Improvado customers use `report.improvado.io` or their company's own Improvado domain instead, see [Install in your AI client](#install-in-your-ai-client).
 
 **Quick start (Claude Code):**
 
 ```bash
-claude mcp add --transport http improvado https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/
+claude mcp add --transport http improvado https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/
 ```
 
 Then open Claude Code and complete the Improvado sign-in prompt. Every other client is covered in [Install in your AI client](#install-in-your-ai-client).
@@ -69,14 +71,14 @@ Three steps: add the server URL in your AI client, sign in with Improvado, ask q
   <img src="https://raw.githubusercontent.com/tekliner/improvado-mcp/master/assets/readme/clients-row-dark.svg" alt="Works with Claude, ChatGPT, Cursor, VS Code, Gemini CLI, Codex and other MCP clients" width="100%">
 </picture>
 
-You need an Improvado account with access to the workspace you want to use. Authenticate through your client's OAuth flow. Never share credentials in chat or commit them to this repository. For Microsoft Copilot, enter the issued client credentials only in the configuration fields named by the official guide.
+You need an Improvado account with access to the workspace you want to use. New users can create a free account at `ai.improvado.io` with a work email. Authenticate through your client's OAuth flow. Never share credentials in chat or commit them to this repository. For Microsoft Copilot, enter the issued client credentials only in the configuration fields named by the official guide.
 
-If your company signs in to Improvado on its own domain, replace `report.improvado.io` with that domain in every URL below (`https://<your-domain>/experimental/agent/api/mcp-customer/v1/invoke/`). On a custom domain, `report.improvado.io` will not authenticate you. The install buttons use the standard domain.
+The URLs below use `ai.improvado.io`, where new users sign up. Existing Improvado customers replace `ai.improvado.io` with the domain they sign in on: `report.improvado.io` for standard accounts, or the company's own domain (`https://<your-domain>/experimental/agent/api/mcp-customer/v1/invoke/`). An account exists on one domain only, so another domain will not authenticate you. The install buttons use `ai.improvado.io`.
 
 ### Claude Desktop and claude.ai
 
 1. Open **Customize > Connectors** (Claude Desktop) or **Settings > Connectors** (claude.ai) and choose **Add custom connector**.
-2. Paste `https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/` and select **Connect**.
+2. Paste `https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/` and select **Connect**.
 3. Complete the Improvado sign-in prompt. The connector appears in your active list once authorized.
 
 ### Claude Code
@@ -84,7 +86,7 @@ If your company signs in to Improvado on its own domain, replace `report.improva
 Option A, one command:
 
 ```bash
-claude mcp add --transport http improvado https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/
+claude mcp add --transport http improvado https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/
 ```
 
 Option B, the Claude Code plugin from this repository (adds the same server):
@@ -101,7 +103,7 @@ Option C, add to your project's `.mcp.json`:
   "mcpServers": {
     "improvado": {
       "type": "http",
-      "url": "https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
+      "url": "https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
     }
   }
 }
@@ -123,7 +125,7 @@ Use the **Install in Cursor** button at the top of this page, or add this to `~/
 {
   "mcpServers": {
     "improvado": {
-      "url": "https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
+      "url": "https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
     }
   }
 }
@@ -138,7 +140,7 @@ Use the **Install in VS Code** button at the top of this page, open this reposit
   "servers": {
     "improvado": {
       "type": "http",
-      "url": "https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
+      "url": "https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/"
     }
   }
 }
@@ -158,7 +160,7 @@ Or merge this configuration into `~/.gemini/settings.json`. If `mcpServers` alre
 {
   "mcpServers": {
     "improvado": {
-      "url": "https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/",
+      "url": "https://ai.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/",
       "type": "http",
       "oauth": { "scopes": ["mcp:customer"] }
     }
@@ -252,9 +254,9 @@ Only data in the workspace you signed in to, limited by your permissions there a
 
 The [Improvado MCP documentation](https://improvado.io/docs-section-topic/improvado-mcp) describes read and write access to the connected platforms and carries the tool reference; the tools you get depend on your account and role. Treat analysis as read-only and ask for a change explicitly when you want one.
 
-### My company signs in to Improvado on its own domain. What do I change?
+### I already use Improvado at report.improvado.io or on my company's own domain. What do I change?
 
-Use that domain in place of `report.improvado.io` in the server URL: `https://<your-domain>/experimental/agent/api/mcp-customer/v1/invoke/`. On a custom domain, the standard URL will not authenticate you.
+Use the domain you sign in on in place of `ai.improvado.io` in the server URL: `https://<your-domain>/experimental/agent/api/mcp-customer/v1/invoke/`, for example `https://report.improvado.io/experimental/agent/api/mcp-customer/v1/invoke/`. An account exists on one domain only: a `report.improvado.io` account will not authenticate on `ai.improvado.io`, and the reverse.
 
 ### Where is the server source code?
 
